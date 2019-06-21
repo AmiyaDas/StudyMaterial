@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<link rel="icon" href="icon.jpg" type="image/gif" sizes="16x16">
+<title>Study</title>
+<style>
+	.qstn {
+		font-size: 15pt;
+		color: #610B4B;
+	}
+
+	.title {
+		/* margin-left: 15%; */
+		/* margin-right: 15%; */
+		text-align: center;
+		color: white;
+		font-size: 30pt;
+		text-shadow: 1px 1px 2px black;
+		font-family: sans-serif;
+		font-style: bold;
+		padding: .3rem;
+		background-color: #00bf9a;
+		background-image: url("background-img.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 2em;
+	}
+
+	.subtitle {
+		margin-top: 0.8rem;
+		/* margin-left: 15%;
+		margin-right: 15%; */
+		color: white;
+		font-size: 20pt;
+		font-family: sans-serif;
+		padding: .3rem;
+		background-color: #00bf9a;
+		0b9 065 cursor: pointer;
+	}
+
+	.box {
+		font-family: erdana, helvetica, arial, sans-serif;
+		/* margin-left: 15%;
+		margin-right: 15%; */
+		margin-top: 0.5rem;
+		margin-bottom: 2rem;
+		padding: 0.5rem;
+		border-radius: 3px;
+		background: rgba(255, 255, 255, 1);
+		color: #000;
+		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+		border: 1px solid rgba(200, 200, 200, 0.85);
+	}
+
+	.ans {
+		font-size: 11pt;
+	}
+
+	.code {
+		width: 90%;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		font-family: consolas;
+		font-size: 10pt;
+		padding: 5px;
+		border: 1px solid #d5ddc6;
+		border-left: 4px solid #6b5;
+		box-shadow: 6px 3px 8px #d4d4d4;
+	}
+
+	.parentBlock {
+		margin: auto;
+		width: 70%;
+		padding: 1rem;
+		box-shadow: 5px 5px 30px 5px #999;
+		background-color: #fafafa;
+	}
+
+	.block {}
+
+	.hide {
+		display: none;
+	}
+
+	.checkBoxes ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.checkBoxes input {
+		width: 15px;
+		height: 15px;
+		pointer-events: none;
+	}
+
+	.checkBoxes li {
+		background-color: #fba;
+	}
+
+	.doneTopic {
+		background-color: #0d7 !important;
+	}
+</style>
+<script>
+	function showDetails(event) {
+		console.log(event);
+		if (event.target.nextElementSibling.className.indexOf("hide") > -1) {
+			event.target.nextElementSibling.className = "box";
+		}
+		else {
+			event.target.nextElementSibling.classList.add("hide");
+		}
+	}
+</script>
+
+<body bgcolor="#f6f6f6" class="center">
+	<div class="parentBlock">
+		<div class="title">Interview Topics</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">Timeline</div>
+			<div class="box">
+				<div class="qstn checkBoxes">
+					<ul>
+						<li class="doneTopic"><input type="checkbox" readonly />Data Structure (6h)</li>
+						<li class="doneTopic"><input type="checkbox" readonly />Java (4h)</li>
+						<li class="doneTopic"><input type="checkbox" readonly />DBMS (5h)</li>
+						<li><input type="checkbox" readonly />Javascript (2h)</li>
+						<li class="doneTopic"><input type="checkbox" readonly checked />SAP UI5 (4h)</li>
+						<li class="doneTopic"><input type="checkbox" readonly />OData (1h)</li>
+						<li><input type="checkbox" readonly />HANA (2h)</li>
+						<li><input type="checkbox" readonly />SCP Neo (2h)</li>
+						<li><input type="checkbox" readonly />Angular (4h)</li>
+						<li><input type="checkbox" readonly />Java(Micro-services) (2h)</li>
+						<li><input type="checkbox" readonly />Puzzles (4h)</li>
+						<li class="doneTopic"><input type="checkbox" readonly />Team & Projects (6h)</li>
+						<li><input type="checkbox" readonly />About SAP(3h)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">Angular</div>
+			<div class="box hide">
+				<div class="qstn">
+					<ul>
+						<li>What? Why?</li>
+						<li>npm</li>
+						<li>AoT Compilation</li>
+						<li>why typescript?</li>
+						<li>Building blocks of Angular</li>
+						<div class="ans">
+							<ul>
+								<li>Modules</li>
+								<li>Component</li>
+								<li>Template</li>
+								<li>Directives</li>
+								<li>Data Binding</li>
+								<li>Services</li>
+								<li>Dependency Injection</li>
+								<li>Routing</li>
+							</ul>
+						</div>
+						<li>Transpiling</li>
+						<li>Lifecycle Hooks of component</li>
+						<li>Components vs Directives</li>
+						<li>@Input vs @Output</li>
+						<li>ng-content Directive</li>
+						<li>ViewEncapsulation</li>
+						<li>Services and command to create a service</li>
+						<li>Dependency Injection in Angular</li>
+						<li>RouterOutlet</li>
+						<li>Pipes</li>
+						<li>String Interpolation</li>
+						<li>Data Binding
+							<div class="ans">
+								<ul>
+									<li>Event Binding</li>
+									<li>Two-way Binding</li>
+									<li>Property Binding</li>
+								</ul>
+							</div>
+						</li>
+						<li>package.json what? use?</li>
+						<li>SPA (Single Page Application)</li>
+						<li>ngModel, what? use?</li>
+						<li>Subscribe method</li>
+						<li>Observables vs Promises</li>
+						<li>AsyncPipe</li>
+						<li>Redux</li>
+						<li>ng-Class vs ng-Style</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">Javascript</div>
+			<div class="box hide">
+				<div class="qstn">
+					<ul>
+						<li>interview qstns</li>
+						<li>diff btw Java & JS</li>
+						<li>diff btw oop & object based programming</li>
+						<li>RxJS</li>
+						<li>ES5 Interview qstns</li>
+						<li>Whats new in ES6</li>
+						<li>Arrow functions</li>
+						<li>closure, promise, timeout, callback</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">SAP UI5</div>
+			<div class="box hide">
+				<div class="qstn">
+					<ul>
+						<li>features of ui5</li>
+						<li>walkthrought</li>
+						<li>controller lifecycle</li>
+						<li>onInit() vs onBeforeRendering ()</li>
+						<li>Formatters</li>
+						<li>Routing:types & parameters</li>
+						<li>Factory fuunctions</li>
+						<li>Binding types and details</li>
+						<li>Fragments & callbacks</li>
+						<li>OPA</li>
+						<li>data definition in manifest</li>
+						<li>use of menifest</li>
+						<li>use of component.js</li>
+						<li>use of neoapp.json</li>
+						<li>use of i18n</li>
+						<li>use of mock server/mock data</li>
+						<li>Master detail page</li>
+						<li>UI5 interview qstns</li>
+						<li>smart template</li>
+						<li>custom control</li>
+						<li>whats new</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">SCP Neo</div>
+			<div class="box hide">
+				<div class="qstn">
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">OData</div>
+			<div class="box hide">
+				<div class="qstn">
+					<ul>
+						<li>what is it?</li>
+						<li>how is it better?</li>
+						<li>important query params</li>
+						<li>how to handle batch/parse batch response</li>
+						<li>diff btw v2 & v4</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">HANA</div>
+			<div class="box hide">
+				<div class="qstn">
+					<ul>
+						<li>Features & Advantages</li>
+						<li>OLTP or OLAP</li>
+						<li>XSJS</li>
+						<li>XSOData</li>
+						<li>Online workspace</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="location.href='https://www.javatpoint.com/corejava-interview-questions'">Java</div>
+			<div class="box hide">
+				<div class="qstn">
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">Java(Micro-services)</div>
+			<div class="box hide">
+				<div class="qstn">
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">Data Structure</div>
+			<div class="box hide">
+				<div class="qstn">
+					<ul>
+						<li>geeks for geeks</li>
+						<li>sorting</li>
+						<li>Binary trees & BST</li>
+						<li>interview qstns</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">DBMS</div>
+			<div class="box hide">
+				<div class="qstn">
+					<ul>
+						<li>Theroy</li>
+						<div class="ans">
+							<ul>
+								<li>Design ER Diagrams</li>
+								<li>Relations</li>
+								<li>ACID properties</li>
+								<li>type of joins</li>
+								<li>Normalization</li>
+								<li>Primary, Super & candidate keys</li>
+							</ul>
+						</div>
+						<li>SQL Queries</li>
+						<div class="ans">
+							<ul>
+								<li>search the pdf with sql qstns and go through it</li>
+								<li>Types of commands</li>
+								<li>Select with all kind of filters</li>
+								<li>Select(nested)</li>
+								<li>Joins</li>
+							</ul>
+						</div>
+						<li>Advance</li>
+						<div class="ans">
+							<ul>
+								<li>postgreSQL basics</li>
+								<li>mongoDB basics</li>
+								<li>how to connect on SCP</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">Puzzles</div>
+			<div class="box hide">
+				<div class="qstn">
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">Team & Projects</div>
+			<div class="box hide">
+				<div class="qstn">
+					<ul>
+						<li>Short intro of product?</li>
+						<li>Short intro of work you did?</li>
+						<li>Why you like this work/team?</li>
+						<li>what were the challenges you faced?</li>
+						<li>what you expect from a team?</li>
+						<li>Bobj</li>
+						<div class="ans">
+							<ul>
+								<li>History & Usage</li>
+							</ul>
+						</div>
+						<li>APIM</li>
+						<div class="ans">
+							<ul>
+								<li>History & Usage</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="subtitle" onclick="showDetails(event)">SAP</div>
+			<div class="box hide">
+				<div class="qstn">
+				<ul>
+						<li>Future goals</li>
+						<li>investments</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
